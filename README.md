@@ -5,7 +5,7 @@ The purpose of this project is to build an Amazon.com like ecommerce website usi
 # Setup
 * Fork, Clone, Create a pull request
 * As you complete each feature of the app; add, commit and push so that we can track your progress
-
+#
 
 # Instructions
 
