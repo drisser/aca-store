@@ -4,7 +4,7 @@
 
 const listProducts = document.getElementById("listProducts");
 
-listProducts.innerHTML = products.map(item=>`<li>${item.name}</li>`).join('');
+listProducts.innerHTML = products.map(item=>`<li>${item.name}, ${item.price}<br>Rating: ${item.rating}/5 - Total Reviews: ${item.reviewed} <br><button onclick="viewDetails()">Details</button></li>`).join('');
 
 //search for products
 
@@ -25,6 +25,10 @@ function searchProducts(){
     searchResults.innerHTML = filteredProducts.map(product => `<li>${product}</li>`).join('')
 }
 
+// show detailed view of product
 
+function viewDetails() {
+  console.log("hello")
+}
 
 

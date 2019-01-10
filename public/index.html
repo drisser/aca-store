@@ -9,21 +9,26 @@
 
 </head>
 <body>
-    <!-- search form for accessing the products array -->
-        <input id="searchBox" type="text" placeholder="" value="almond">
-        <button onclick="searchProducts()" id="searchButton" type="button"><i class="fas fa-search"></i></button>
+    <h1>aca-store</h1>
+    <!-- buttons to interact with the app by searching or viewing cart -->
+    <input id="searchBox" type="text" placeholder="" value=""/>
+    <button onclick="searchProducts()" id="searchButton" type="button"><i class="fas fa-search"></i>
+    </button>
+    <button onclick="viewcart()" id="viewCartButton" type="button">View Cart <i class="fas fa-shopping-cart"></i></button>
     <!-- array generated from the search function appears here -->
     <div>
-        <ul id="searchResults">
-
-        </ul>
+        <ul id="searchResults"></ul>
     </div>
-    <!-- list of all products found in the products.js array -->
+    <!-- list of all products in the products.js array -->
     <div>
-        <h1>All Products</h1>
+        <h3>Products:</h3>
         <ul id="listProducts">
 
         </ul>
+    </div>
+    <!-- detailed view of an individual product -->
+    <div id="productDetail">
+        
     </div>
      <script src="products.js"></script>    
     <script src="index.js"></script>   
