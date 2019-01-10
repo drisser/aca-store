@@ -34,3 +34,5 @@ const selectNumber = `<select><option value=1>1</option><option value=2>2</optio
 function viewDetails(index) {
   productDetail.innerHTML = `<p>${products[index].name}</p> <p>Info: ${products[index].description}</p> <p>Type: ${products[index].category}</p> <p>Rating: ${products[index].rating}/5</p> <button>Reviews <i class="fas fa-star-half-alt"></i></button> <button>Add To Cart <i class="fas fa-cart-plus"></i></button> ${selectNumber}`;
 }
+
+// create shopping cart, add iteams to shopping cart

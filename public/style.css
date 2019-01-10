@@ -1,0 +1,50 @@
+* {
+  font-family: Roboto;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas:
+  "search search search"
+  "products details cart";
+}
+
+#searchArea {
+  grid-area: search;
+  text-align: center;
+}
+
+#productDisplay {
+  grid-area: products;
+}
+
+#productDisplay h3 {
+  text-align: center;
+}
+
+#listProducts {
+  list-style-type: none;
+ }
+
+ #listProducts li {
+   padding: .5rem;
+ }
+
+#singleProduct {
+  grid-area: details;
+  width: 400px;
+  text-align: center;
+}
+
+
+
+#singleProduct h3 {
+  text-align: center;
+}
+
+#shoppingCart {
+  text-align: center;
+  grid-area: cart;
+}
