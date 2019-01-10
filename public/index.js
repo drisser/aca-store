@@ -1,4 +1,7 @@
+'use strict'
+
 //list of products
+
 const listProducts = document.getElementById("listProducts");
 
 listProducts.innerHTML = products.map(item=>`<li>${item.name}</li>`).join('');
@@ -6,11 +9,21 @@ listProducts.innerHTML = products.map(item=>`<li>${item.name}</li>`).join('');
 //search for products
 
 const searchBox = document.getElementById('searchBox');
-const searchInput = searchBox.toLowerCase;
-const searchSubmit = document.getElementById('searchSubmit');
+const searchButton = document.getElementById('searchButton');
 const searchResults = document.getElementById('searchResults');
 
-const results = products.filter(item=>item.name.indexOf(searchInput) > -1);
+function searchProducts(){
+    let filteredProducts = [];
+    products.forEach((item) => {
+        let nameArray = item.name.split(' ')
+        console.log(nameArray);
+        nameArray.filter(names =>{
+            if(names == searchBox.value){
+                filteredProducts.push(item.name)
+            }
+        })
+    })
+    
+}
 
-searchSubmit.addEventListener('click', function(){
-  searchResults.innerHTML = results.map(result=>`<p>${result.name}</p>`)})
+// searchResults.innerHTML = filteredProducts.map(product => `<li>${product}</li>`).join('')
