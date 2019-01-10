@@ -4,7 +4,7 @@
 
 const listProducts = document.getElementById("listProducts");
 
-listProducts.innerHTML = products.map(item=>`<li>${item.name}, ${item.price}<br>Rating: ${item.rating}/5 - Total Reviews: ${item.reviewed} <br><button onclick="viewDetails()">Details</button></li>`).join('');
+listProducts.innerHTML = products.map(item=>`<li>${item.name}, ${item.price}<br>Rating: ${item.rating}/5 - Total Reviews: ${item.reviewed} <br><button onclick="viewDetails(${item._id-1})">Details</button></li>`).join('');
 
 //search for products
 
@@ -27,8 +27,10 @@ function searchProducts(){
 
 // show detailed view of product
 
-function viewDetails() {
-  console.log("hello")
+const productDetail = document.getElementById("productDetail");
+
+const selectNumber = `<select><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option></select>`
+
+function viewDetails(index) {
+  productDetail.innerHTML = `<p>${products[index].name}</p> <p>Info: ${products[index].description}</p> <p>Type: ${products[index].category}</p> <p>Rating: ${products[index].rating}/5</p> <button>Reviews <i class="fas fa-star-half-alt"></i></button> <button>Add To Cart <i class="fas fa-cart-plus"></i></button> ${selectNumber}`;
 }
-
-
