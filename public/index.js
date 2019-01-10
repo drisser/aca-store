@@ -16,14 +16,15 @@ function searchProducts(){
     let filteredProducts = [];
     products.forEach((item) => {
         let nameArray = item.name.split(' ')
-        console.log(nameArray);
         nameArray.filter(names =>{
             if(names == searchBox.value){
                 filteredProducts.push(item.name)
             }
         })
     })
-    
+    searchResults.innerHTML = filteredProducts.map(product => `<li>${product}</li>`).join('')
 }
 
-// searchResults.innerHTML = filteredProducts.map(product => `<li>${product}</li>`).join('')
+
+
+
