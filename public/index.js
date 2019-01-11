@@ -32,7 +32,19 @@ const productDetail = document.getElementById("productDetail");
 const selectNumber = `<select><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option><option value=10>10</option></select>`
 
 function viewDetails(index) {
-  productDetail.innerHTML = `<p>${products[index].name}</p> <p>Info: ${products[index].description}</p> <p>Type: ${products[index].category}</p> <p>Rating: ${products[index].rating}/5</p> <button>Reviews <i class="fas fa-star-half-alt"></i></button> <button>Add To Cart <i class="fas fa-cart-plus"></i></button> ${selectNumber}`;
+    console.log(products[index].name)
+  productDetail.innerHTML = `<h3>Details</h3><br><p>${products[index].name}</p> <p>Info: ${products[index].description}</p> <p>Type: ${products[index].category}</p> <p>Rating: ${products[index].rating}/5</p> <button>Reviews <i class="fas fa-star-half-alt"></i></button> <button onclick="addToCart(${index})">Add To Cart <i class="fas fa-cart-plus"></i></button> ${selectNumber}`;
 }
 
 // create shopping cart, add iteams to shopping cart
+
+const shoppingCart = document.getElementById("shoppingCart");
+const cart = [];
+
+function addToCart(index){
+    return cart.push(products[index].name);
+}
+
+    // shoppingCart.innerHTML = `${cart}`; 
+
+

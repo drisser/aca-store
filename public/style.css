@@ -11,17 +11,25 @@ body {
   "products details cart";
 }
 
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 #searchArea {
   grid-area: search;
   text-align: center;
+  background-color: orange;
+}
+
+#searchBox {
+  width: 30rem;
+  height: 1rem;
 }
 
 #productDisplay {
   grid-area: products;
-}
-
-#productDisplay h3 {
-  text-align: center;
+  background-color: aquamarine;
 }
 
 #listProducts {
@@ -32,19 +40,15 @@ body {
    padding: .5rem;
  }
 
-#singleProduct {
+#productDetail {
   grid-area: details;
-  width: 400px;
-  text-align: center;
-}
-
-
-
-#singleProduct h3 {
+  background-color: red;
   text-align: center;
 }
 
 #shoppingCart {
   text-align: center;
   grid-area: cart;
+  background-color: green;
+
 }
