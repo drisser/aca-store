@@ -14,10 +14,16 @@
      <!-- buttons to interact with the app by searching or viewing cart -->
     <div id="searchArea">
         <h1>aca-store</h1>
+        <select id="selectProduct">
+            <option value="default" onchange="selectFood()">--Choose--</option>
+            <option value="food">food</option>
+            <option value="electronics">electronics</option>
+            <option value="sporting">sporting</option>
+        </select>
         <input id="searchBox" type="text" placeholder="" value=""/>
         <button onclick="searchProducts()" id="searchButton" type="button"><i class="fas fa-search"></i>
         </button>
-        <button onclick="viewcart()" id="viewCartButton" type="button">View Cart <i class="fas fa-shopping-cart"></i></button>
+        <button onclick="viewCart()" id="viewCartButton" type="button">View Cart <i class="fas fa-shopping-cart"></i></button>
     <!-- array generated from the search function appears here -->
         <div>
             <ul id="searchResults"></ul>
